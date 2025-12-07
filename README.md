@@ -631,6 +631,15 @@ The application uses hardcoded hotel data across 10 major Indian cities:
 
 ---
 
+---
+
+## Screenshots
+
+![Search Page](./images/search-page.png)
+![Admin Panel](./images/admin-panel-page.png)
+
+---
+
 ## Known Limitations
 
 ### 1. Static Hotel Data

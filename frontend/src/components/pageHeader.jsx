@@ -1,12 +1,14 @@
-import { useNavigate } from "react-router"
+import { useNavigate, useLocation } from "react-router"
 import { Button } from "@mui/material"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
+import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 
 
 export default function PageHeader({ title }) {
     const navigate = useNavigate()
+    const { pathname } = useLocation()
     
 
     return (
@@ -16,16 +18,29 @@ export default function PageHeader({ title }) {
             </Box>
 
             <Box className="flex items-end">
-                <Button
-                    style={{ background: "#ffffff" }}
-                    variant="contained"
-                    size="large"
-                    fullWidth
-                    onClick={() => navigate("/admin/markups")}
-                    endIcon={<ArrowForwardIcon sx={{ color: "black" }}/>}
-                >
-                    <Typography variant="h4" color="black">Admin Panel</Typography>
-                </Button>
+                {pathname !== "/admin/markups" ? (
+                    <Button
+                        style={{ background: "#ffffff" }}
+                        variant="contained"
+                        size="large"
+                        fullWidth
+                        onClick={() => navigate("/admin/markups")}
+                        endIcon={<ArrowForwardIcon sx={{ color: "black" }}/>}
+                    >
+                        <Typography variant="h4" color="black">Admin Panel</Typography>
+                    </Button>
+                ) : (
+                    <Button
+                        style={{ background: "#ffffff" }}
+                        variant="contained"
+                        size="large"
+                        fullWidth
+                        onClick={() => navigate("/")}
+                        startIcon={<ArrowBackIcon sx={{ color: "black" }}/>}
+                    >
+                        <Typography variant="h4" color="black">Back</Typography>
+                    </Button>
+                )}
             </Box>
         </Box>
     )
