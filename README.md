@@ -715,19 +715,6 @@ Despite being a "hotel booking app", the system only supports:
 
 ---
 
-## 📝 Assignment Evaluation Criteria
-
-| Criteria | Weight | Status |
-|----------|--------|--------|
-| Frontend UI Quality | 25% | Completed |
-| Backend Logic & APIs | 30% | Completed |
-| Database Design | 15% | Completed |
-| Markup Pricing Logic | 15% | Completed |
-| Code Quality | 10% | Completed |
-| Completion in 2 Days | 5% | Completed |
-
-**Total Score:** 100%
-
 ---
 
 ## Contact
