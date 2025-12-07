@@ -1,5 +1,4 @@
-import Markup from "../db/models/markup"
-
+import Markup from "../db/models/markup.js"
 
 
 export async function createOrUpdateMarkup(city, markup) {

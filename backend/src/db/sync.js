@@ -1,6 +1,5 @@
 import sequelize from "../config/dbConfig.js"
 import Markup from "./models/markup.js"
-import Hotel from "./models/hotel.js"
 
 export async function syncDb() {
     try {

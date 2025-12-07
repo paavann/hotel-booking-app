@@ -1,11 +1,11 @@
-import { createOrUpdateMarkup, getAllMarkups, updateMarkupByCity, deleteMarkupByCity,  } from "../services/markupService"
+import { createOrUpdateMarkup, getAllMarkups, updateMarkupByCity, deleteMarkupByCity,  } from "../services/markupService.js"
 
 
 
 
 export async function listMarkups(req, res) {
     try {
-        const list = await getAllMarkups(city, markup)
+        const list = await getAllMarkups()
         return res.status(201).json(list)
     } catch(err) {
         console.error("error getting markups: ", err)

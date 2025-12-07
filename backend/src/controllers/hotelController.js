@@ -1,5 +1,4 @@
-import { validationResult } from "express-validator"
-import { searchHotels } from "../services/hotelService"
+import { searchHotels } from "../services/hotelService.js"
 
 
 export async function handleHotelSearch(req, res) {

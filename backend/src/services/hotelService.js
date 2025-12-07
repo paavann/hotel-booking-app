@@ -1,15 +1,14 @@
-import Hotel from "../db/models/hotel"
-import Markup from "../db/models/markup"
+import Markup from "../db/models/markup.js"
+import { HOTELS } from "../utils/hotelData.js"
 
 
 export async function searchHotels(city) {
     const markupRecord = await Markup.findOne({ where:{ city } })
     const markup = markupRecord ? markupRecord.markup : 0
 
-    const hotels = await Hotel.findAll({
-        where: { city },
-        raw: true,
-    })
+    const hotels = HOTELS.filter(
+        (h) => h.city.toLowerCase() === city.toLowerCase()
+    )
 
     const results = hotels.map((hotel) => {
         const finalPrice = Math.round(
